@@ -13,11 +13,18 @@ RSpec.describe "string_checker method" do
       expect(result).to eq false
     end
   end
-  
-  context "when given a string that contains #TODO" do
+
+  context "when passed #TODO" do
     it "passes" do
       result = string_checker("#TODO")
       expect(result).to eq true
     end
-  end  
+  end
+
+  context "when given a string that contains #TODO" do
+    it "passes" do
+      result = string_checker("this is what #TODO")
+      expect(result).to eq true
+    end
+  end      
 end

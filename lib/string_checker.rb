@@ -1,6 +1,7 @@
 def string_checker(text)
   fail "fail, gave an empty string" if text.empty?
-  if text.include?("#TODO")
+  words = text.split(" ")
+  if words.include?("#TODO")
     return true
   else
     return false
