@@ -1,13 +1,22 @@
 def improving_grammar(text)
   if text.empty?
-    raise EmptyStringException.new("Cannot give empty string!")
+    raise StringQualityException.new("Cannot give empty string!")
+  #elsif
+
+  #   raise StringQualityException.new("String must end with full stop!")
+
+  # elsif text[0] != text[0].upcase
+  #   raise StringQualityException.new("String must begin with capital letter!")
+
+   elsif text[0] != text[0].upcase
+      return false
   else
     return true
   end
 end
 
-class EmptyStringException < Exception
+class StringQualityException < Exception
   def initialize(message) 
-    super("EmptyStringException occured: #{message}")
+    super("StringQualityException occured: #{message}")
   end
 end
