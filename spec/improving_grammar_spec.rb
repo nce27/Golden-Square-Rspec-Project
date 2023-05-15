@@ -6,18 +6,18 @@ RSpec.describe do
         expect { improving_grammar("") }.to raise_error(StringQualityException, "StringQualityException occured: Cannot give empty string!")
     end
   end
-  context "given a sentence that begins with a capital and full stop" do
+  context "given a sentence that begins with a capital and ends with a full stop" do
     it "returns true" do
       result = improving_grammar("Hello there.")
       expect(result).to eq true
     end
   end
 
-  # context "given a sentence that begins with a captial letter without a full stop" do
-  #   it "returns fail" do
-  #     expect { improving_grammar("Hello there")}.to raise_error(StringQualityException, "StringQualityException occured: String must end with full stop!")
-  #   end
-  # end
+  context "given a sentence that begins with a captial letter without a full stop" do
+    it "returns fail" do
+      expect { improving_grammar("Hello there")}.to raise_error(StringQualityException, "StringQualityException occured: String must end with full stop!")
+    end
+  end
 
   context "given a sentence that has a full stop but no a captial letter" do
     it "returns fail" do
