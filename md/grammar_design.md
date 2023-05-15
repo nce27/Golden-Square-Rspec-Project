@@ -10,8 +10,8 @@ I want to verify that a text starts with a capital letter and ends with a suitab
 
 is_correct = check_grammar(text)
 
-# * test is a string varibale with words in it.
-# * test is a boolean varibale that verifies if the text is correct or not.
+# * text is a string varibale with words in it.
+# * is_correct is a boolean varibale that verifies if the text is correct or not.
 
 
 ## Example Tests
@@ -19,7 +19,7 @@ is_correct = check_grammar(text)
 
   # 1 - and empty string
     improving_grammar("")
-    # => "fail not a sentence"
+    # => "false not a sentence"
 
   # 2 
     improving_grammar("Hello there.")
