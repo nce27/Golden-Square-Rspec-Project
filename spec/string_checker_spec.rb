@@ -6,4 +6,11 @@ RSpec.describe "string_checker method" do
       expect { string_checker("")}.to raise_error("fail, gave an empty string")
     end
   end
+  
+  context "when given a string that contains TODO without '#'" do
+    it "fails" do
+      result = string_checker("TODO")
+      expect(result).to eq false
+    end
+  end  
 end
