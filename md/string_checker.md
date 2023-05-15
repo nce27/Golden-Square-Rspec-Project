@@ -18,15 +18,15 @@ is_present
  ```ruby
 
   # 1 - and empty string
-    improving_grammar("")
+    string_checker("")
     # => "fail, gave an empty string"
 
   # 2 
-    improving_grammar("#DONT")
+    string_checker("#DONT")
     # => false
 
   # 3 
-    improving_grammar("TODO")
+    string_checker("TODO")
     # => false
 
   # 4 
@@ -34,7 +34,7 @@ is_present
     # => true
 
   # 5 
-    improving_grammar("this is what #TODO")
+    string_checker("this is what #TODO")
     # => true
 
  ```
