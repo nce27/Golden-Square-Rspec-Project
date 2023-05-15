@@ -33,6 +33,10 @@ is_correct = check_grammar(text)
     improving_grammar("hello there.")
     # => false
 
+  # 4.5  
+    improving_grammar("hello there")
+    # => false
+
   # 5
     improving_grammar("HELLO there.")
     # => true

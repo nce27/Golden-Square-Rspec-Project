@@ -11,11 +11,15 @@ RSpec.describe do
       result = improving_grammar("Hello there.")
       expect(result).to eq true
     end
+    # it "returns true" do
+    #   result = improving_grammar("HELLO there!")
+    #   expect(result).to eq true
+    #   end
   end
 
   context "given a sentence that begins with a captial letter without a full stop" do
     it "returns fail" do
-      expect { improving_grammar("Hello there")}.to raise_error(StringQualityException, "StringQualityException occured: String must end with full stop!")
+      expect { improving_grammar("Hello there")}.to raise_error(StringQualityException, "StringQualityException occured: String must end with a valid sentence ender!")
     end
   end
 
@@ -24,4 +28,18 @@ RSpec.describe do
       expect { improving_grammar("hello there.")}.to raise_error(StringQualityException, "StringQualityException occured: String must begin with capital letter!")
     end
   end
+
+  context "given a sentence that has neither a full stop nor a captial letter" do
+    it "returns fail" do
+      expect { improving_grammar("hello there")}.to raise_error(StringQualityException, "StringQualityException occured: String must begin with capital letter!")
+    end
+  end  
+
+  # context "given a string who's first word is all caps and ends with an exclamation mark" do
+  #   it "returns true" do
+  #     result = improving_grammar("HELLO there!")
+  #     expect(result).to eq true
+  #   end
+  # end
+
 end
