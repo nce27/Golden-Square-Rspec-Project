@@ -44,7 +44,7 @@ RSpec.describe do
 
   # context "given a sentence with an uppercase first word and ends with an exclamation mark" do
   #   it "returns true" do
-  #     result = improving_grammar("HELLO there!")
+  #     result = improving_grammar("Hello there!")
   #     expect(result).to eq true
   #   end
   # end  

@@ -2,8 +2,11 @@ def improving_grammar(text)
   if text.empty?
     # => false
     raise StringQualityException.new("Cannot give empty string!")
+  end
+  #last_char_is_incorrect = text.include?[".", "!"]
+  last_char_is_lowercase = text[0] != text[0].upcase
 
-  elsif text[0] != text[0].upcase #tests if the first letter is lowercase
+  if last_char_is_lowercase #tests if the first letter is lowercase
     # => false
     raise StringQualityException.new("String must begin with capital letter!")  
 
@@ -13,7 +16,7 @@ def improving_grammar(text)
 
   #elsif text[-1] != "!" || text[-1] != "?" 
 
-  elsif text[0] != text[0].upcase && text[-1] != "."
+  elsif last_char_is_lowercase && text[-1] != "."
    # => false
     raise StringQualityException.new("String must begin with capital letter and end with a valid sentence ender!")
   
