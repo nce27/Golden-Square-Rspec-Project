@@ -21,9 +21,7 @@ RSpec.describe do
 
   context "given a sentence that has a full stop but no a captial letter" do
     it "returns fail" do
-      result = improving_grammar("hello there.")
-      expect(result).to eq false
-      #expect { improving_grammar("hello there.")}.to raise_error(StringQualityException, "StringQualityException occured: String must begin with capital letter!")
+      expect { improving_grammar("hello there.")}.to raise_error(StringQualityException, "StringQualityException occured: String must begin with capital letter!")
     end
   end
 end
