@@ -35,11 +35,18 @@ RSpec.describe do
     end
   end  
 
-  # context "given a string who's first word is all caps and ends with an exclamation mark" do
+  context "given a sentence with an uppercase first word" do
+    it "returns true" do
+      result = improving_grammar("HELLO there.")
+      expect(result).to eq true
+    end
+  end
+
+  # context "given a sentence with an uppercase first word and ends with an exclamation mark" do
   #   it "returns true" do
   #     result = improving_grammar("HELLO there!")
   #     expect(result).to eq true
   #   end
-  # end
+  # end  
 
 end
